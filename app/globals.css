@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
+}
+
+:root {
+  color-scheme: light;
+  --background: #f5f2eb;
+  --foreground: #1d2a30;
+  --card: #e6e1d7;
+  --card-foreground: #1d2a30;
+  --primary: #b4654d;
+  --primary-foreground: #fffaf4;
+  --secondary: #cddbd2;
+  --secondary-foreground: #1d2a30;
+  --muted: #ebe7df;
+  --muted-foreground: #667176;
+  --accent: #7da398;
+  --accent-foreground: #1d2a30;
+  --border: #d2ccc0;
+  --input: #ded8ce;
+  --ring: #b4654d;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
+  --radius: 0rem;
+}
+
+* { border-color: var(--border); }
+html { scroll-behavior: smooth; background: var(--background); }
+body { background: var(--background); color: var(--foreground); font-family: var(--font-body); line-height: 1.55; }
+.font-serif { font-family: var(--font-display); }
+::selection { background: var(--primary); color: var(--primary-foreground); }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Keep horizontal editorial carousels tactile without showing browser chrome. */
+::-webkit-scrollbar { height: 5px; }
+::-webkit-scrollbar-track { background: var(--muted); }
+::-webkit-scrollbar-thumb { background: var(--primary); }
