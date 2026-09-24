@@ -131,7 +131,7 @@ export const rooms: Room[] = [
     ],
   },
 ];
-export const navItems = ["Stay", "Eat", "Bathing Club", "Guide", "Journal"];
+export const navItems = ["Stay", "Eat", "Bathing Club", "Guide"];
 export function getRoom(slug: string) {
   return rooms.find((room) => room.slug === slug);
 }
